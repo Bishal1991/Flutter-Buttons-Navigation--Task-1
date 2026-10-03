@@ -3,8 +3,9 @@ import 'package:classassignment/login.dart';
 import 'package:classassignment/profile.dart';
 import 'package:classassignment/setting.dart';
 import 'package:classassignment/signup.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:classassignment/details.dart';
 import 'package:flutter/material.dart';
+
 
 
 enum calanderView {day, week, month, year}
@@ -24,7 +25,7 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.lightGreen.shade300,
       appBar: AppBar(
         backgroundColor: Color(0xFF386A1F),
-        title: SafeArea(child: Text("Home", style: TextStyle(color: Colors.white),)),
+        title: SafeArea(child: Text("Button Gallery", style: TextStyle(color: Colors.white),)),
         actions: <Widget>[
           IconButton(
             onPressed: () {
@@ -93,8 +94,14 @@ class _HomeState extends State<Home> {
                       SizedBox(
                         width: 150,
                         child: ElevatedButton(
-                          onPressed: () {},
-                          child: Text("Elevated Button"),
+                          onPressed: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(
+                                    builder: (context)=>Details()
+                                )
+                            );
+                          },
+                          child: Text("Details"),
                         ),
                       ),
 
