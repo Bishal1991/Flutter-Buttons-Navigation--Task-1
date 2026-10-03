@@ -1,5 +1,3 @@
-import 'package:classassignment/add.dart';
-import 'package:classassignment/login.dart';
 import 'package:classassignment/profile.dart';
 import 'package:classassignment/setting.dart';
 import 'package:classassignment/signup.dart';
@@ -155,11 +153,7 @@ class _HomeState extends State<Home> {
                           foregroundColor: Colors.white,
                         ),
                         onPressed: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(
-                                  builder: (context)=> addPage()
-                              )
-                          );
+                          Navigator.pushNamed(context, '/add');
                         },
                         child: Text("Add page"),
                       ),
@@ -177,7 +171,7 @@ class _HomeState extends State<Home> {
 
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => loginPage()));
+          Navigator.pushReplacementNamed(context, '/');
         },
         child: Icon(Icons.exit_to_app),
       ),
